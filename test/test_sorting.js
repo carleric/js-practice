@@ -1,7 +1,7 @@
 var assert = require('assert');
-var mergeSort = require('../mergesort.js').mergeSort;
-var quickSort = require('../quicksort.js').quickSort;
-var mergeTwoSortedArrays = require('../sorting_problems.js').mergeTwoSortedArrays;
+var mergeSort = require('../sorting/mergesort.js').mergeSort;
+var quickSort = require('../sorting/quicksort.js').quickSort;
+var mergeTwoSortedArrays = require('../sorting/sorting_problems.js').mergeTwoSortedArrays;
 
 describe('Sorting Problems', function() {
   describe('#mergesort', function () {
