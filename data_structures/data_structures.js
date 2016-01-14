@@ -1,17 +1,38 @@
 
-exports.prepend = function prepend(val, list) {
+var reverseArray = function (array) {
+ var newArray = [];
+  for(var i = array.length-1; i >=0; i--){
+   newArray.push(array[i]);
+  }
+  return newArray;
+}
+
+var reverseArrayInPlace = function(array) {
+  var i = 0;
+  var j = array.length -1;
+  for (; i < array.length/2; i++, j--) {
+   var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+exports.reverseArray = reverseArray;
+exports.reverseArrayInPlace = reverseArrayInPlace;
+
+var prepend = function prepend(val, list) {
   return {value:val, rest:list};
 }
 
-exports.arrayToList = function arrayToList(array) {
+var arrayToList = function arrayToList(array) {
   var list = null;
   for (var i = array.length -1; i >= 0; i--) {
- 	  list = exports.prepend(array[i], list);
+ 	  list = prepend(array[i], list);
   }
   return list;
 }
 
-exports.listToArray = function listToArray(list) {
+var listToArray = function listToArray(list) {
   array = [];
   current = list;
   array.push(current.value);
@@ -23,11 +44,15 @@ exports.listToArray = function listToArray(list) {
 }
 
 
-exports.nth = function nth(list, index) {
-  var arr = exports.listToArray(list);
+var nth = function nth(list, index) {
+  var arr = listToArray(list);
   return arr[index];
 }
 
+exports.prepend = prepend;
+exports.arrayToList = arrayToList;
+exports.listToArray = listToArray;
+exports.nth = nth;
 
 exports.deepEqual = function deepEqual(o1, o2) {
   debugger;

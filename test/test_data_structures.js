@@ -3,6 +3,20 @@ var dataStructures = require('../data_structures/data_structures.js');
 
 describe('Data Structures', function() {
 
+  describe('#reverseArray', function () {
+    it('should return the reverse order of an array', function () {
+      assert.deepEqual(dataStructures.reverseArray(["A", "B", "C"]), ["C", "B", "A"]);
+    });
+  });
+
+  describe('#reverseArrayInPlace', function () {
+    it('should reverse the contents of an array in place', function () {
+      var arrayValue = [1, 2, 3, 4, 5];
+      dataStructures.reverseArrayInPlace(arrayValue);
+      assert.deepEqual(arrayValue, [5, 4, 3, 2, 1]);
+    });
+  });
+
   describe('#arrayToList', function () {
     it('should convert array to linked list', function () {
       assert.deepEqual(dataStructures.arrayToList([10, 20]), {value: 10, rest: {value: 20, rest: null}});
