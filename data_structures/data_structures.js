@@ -1,4 +1,25 @@
 
+function range(from, to, step) {
+  var stp = step == undefined ? 1 : step;
+  var range = [];
+  var current = from;
+  range.push(current);
+  while (true) {
+    current += stp;
+    range.push(current);
+    if(current == to) break;
+  } ;
+  return range;
+}
+
+function sum(array) {
+ var sum = 0;
+  for(var i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
+}
+
 var reverseArray = function (array) {
  var newArray = [];
   for(var i = array.length-1; i >=0; i--){
