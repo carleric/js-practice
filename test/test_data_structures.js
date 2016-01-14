@@ -7,9 +7,9 @@ describe('Data Structures', function() {
       var obj = {here: {is: "an"}, object: 2};
       assert(deepEqual(obj, obj));
       // → true
-      //assert.isFalse(deepEqual(obj, {here: 1, object: 2}));
+      assert(!deepEqual(obj, {here: 1, object: 2}));
       // → false
-      //assert(deepEqual(obj, {here: {is: "an"}, object: 2}));
+      assert(deepEqual(obj, {here: {is: "an"}, object: 2}));
       // → true
 
     });
