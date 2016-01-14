@@ -1,3 +1,34 @@
+
+exports.prepend = function prepend(val, list) {
+  return {value:val, rest:list};
+}
+
+exports.arrayToList = function arrayToList(array) {
+  var list = null;
+  for (var i = array.length -1; i >= 0; i--) {
+ 	  list = exports.prepend(array[i], list);
+  }
+  return list;
+}
+
+exports.listToArray = function listToArray(list) {
+  array = [];
+  current = list;
+  array.push(current.value);
+  while(current.rest != null) {
+    current = current.rest;
+    array.push(current.value);
+  }
+  return array;
+}
+
+
+exports.nth = function nth(list, index) {
+  var arr = exports.listToArray(list);
+  return arr[index];
+}
+
+
 exports.deepEqual = function deepEqual(o1, o2) {
   debugger;
   if(countProperties(o1) != countProperties(o2)) return false;
