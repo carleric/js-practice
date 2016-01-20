@@ -38,8 +38,7 @@ var reverseArrayInPlace = function(array) {
   }
 }
 
-exports.reverseArray = reverseArray;
-exports.reverseArrayInPlace = reverseArrayInPlace;
+
 
 var prepend = function prepend(val, list) {
   return {value:val, rest:list};
@@ -70,12 +69,9 @@ var nth = function nth(list, index) {
   return arr[index];
 }
 
-exports.prepend = prepend;
-exports.arrayToList = arrayToList;
-exports.listToArray = listToArray;
-exports.nth = nth;
 
-exports.deepEqual = function deepEqual(o1, o2) {
+
+var deepEqual = function deepEqual(o1, o2) {
   debugger;
   if(countProperties(o1) != countProperties(o2)) return false;
   var countEqual = 0;
@@ -98,4 +94,14 @@ function countProperties(obj) {
       count++;
   }
   return count;
+}
+
+module.exports = {
+  reverseArray: reverseArray,
+  reverseArrayInPlace : reverseArrayInPlace,
+  prepend : prepend,
+  arrayToList : arrayToList,
+  listToArray : listToArray,
+  nth : nth,
+  deepEqual : deepEqual
 }
