@@ -22,7 +22,7 @@ function sum(array) {
 
 var reverseArray = function (array) {
  var newArray = [];
-  for(var i = array.length-1; i >=0; i--){
+  for(var i = array.length-1; i >= 0; i--){
    newArray.push(array[i]);
   }
   return newArray;
@@ -38,13 +38,11 @@ var reverseArrayInPlace = function(array) {
   }
 }
 
-
-
-var prepend = function prepend(val, list) {
+var prepend = function (val, list) {
   return {value:val, rest:list};
 }
 
-var arrayToList = function arrayToList(array) {
+var arrayToList = function (array) {
   var list = null;
   for (var i = array.length -1; i >= 0; i--) {
  	  list = prepend(array[i], list);
@@ -52,7 +50,7 @@ var arrayToList = function arrayToList(array) {
   return list;
 }
 
-var listToArray = function listToArray(list) {
+var listToArray = function (list) {
   array = [];
   current = list;
   array.push(current.value);
@@ -63,16 +61,13 @@ var listToArray = function listToArray(list) {
   return array;
 }
 
-
-var nth = function nth(list, index) {
+var nth = function (list, index) {
   var arr = listToArray(list);
   return arr[index];
 }
 
-
-
-var deepEqual = function deepEqual(o1, o2) {
-  debugger;
+var deepEqual = function (o1, o2) {
+  //debugger;
   if(countProperties(o1) != countProperties(o2)) return false;
   var countEqual = 0;
   for (var name in o1) {

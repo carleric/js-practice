@@ -17,7 +17,7 @@ exports.mergeTwoSortedArrays = function (A, B) {
 // ex: input: find 5 in (15, 16, 19, 20, 25, 1, 3, 4, 5, 7, 10, 14)
 //     output: 8 (index of 5 in the array)
 exports.indexOfIntegerInArray = function indexOfIntegerInArray(integer, array, left, right) {
-  debugger;
+  //debugger;
   var searchIndex = Math.floor((left + right) / 2);
 
   if(array[searchIndex] == integer) {
@@ -51,7 +51,7 @@ exports.indexOfIntegerInArray = function indexOfIntegerInArray(integer, array, l
 // c. binary search on isolated row
 
 exports.findElementInSortedMatrix = function findElementInSortedMatrix(element, matrix) {
-  debugger;
+  //debugger;
   var row = 0;
   var col = matrix[0].length - 1;
   while (row < matrix.length && col >= 0) {

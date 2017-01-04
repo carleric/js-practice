@@ -4,8 +4,9 @@
 // - int is missing from range
 // - int is duplicated
 // example: [2, 3, 4, 6, 7], range(1-6)
+//         oor: 1, dup: 0, missing: 2
 
-var countOfRangeMistakes = function countOfRangeMistakes(intArray, rangeLower, rangeHigher) {
+var countOfRangeMistakes = function (intArray, rangeLower, rangeHigher) {
   var countMistakes = 0;
   var intSeenBefore = {};
 
@@ -19,7 +20,6 @@ var countOfRangeMistakes = function countOfRangeMistakes(intArray, rangeLower, r
       countMistakes++;
     }
     intSeenBefore[int] = 1;
-
   });
 
   //missing
@@ -30,7 +30,6 @@ var countOfRangeMistakes = function countOfRangeMistakes(intArray, rangeLower, r
   }
 
   return countMistakes;
-
 }
 
 exports.countOfRangeMistakes = countOfRangeMistakes;

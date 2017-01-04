@@ -1,0 +1,22 @@
+{
+  "name": "js-practice",
+  "version": "1.0.0",
+  "description": "A small project for me to practice javascript algorithms, data structures and test driven development",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carleric/js-practice.git"
+  },
+  "author": "cbolstad@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carleric/js-practice/issues"
+  },
+  "homepage": "https://github.com/carleric/js-practice#readme"
+}
